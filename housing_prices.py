@@ -109,7 +109,7 @@ if __name__ == '__main__':
             loss.backward()
             optimizer.step()
 
-            running_loss = loss.item()
+            running_loss += loss.item()
 
         if epoch % 500 == 0:
             torch.save({
